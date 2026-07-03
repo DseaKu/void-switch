@@ -52,7 +52,7 @@ TOTAL_TRAVEL = 4; // [1:0.1:20]
 // How much extra space (up/down) will be used to contain the stem (does not impact TOTAL_TRAVEL).  Longer == less wobble BUT the switch will be taller.  Doesn't really impact the feel of the switch otherwise.
 SHEATH_LENGTH = 0.2; // [0:0.1:2]
 // Wiggle room inside the sheath for the stem. If your stem doesn't effortlessly slide inside the sheath you need to increase the tolerance or check your printing layer height isn't messing with it.
-STEM_TOLERANCE = 0.11; // [0.01:0.01:0.3]
+STEM_TOLERANCE = 0.09; // [0.01:0.01:0.3]
 //   ^ IMPORTANT!  If the stem doesn't effortlessly slide in and out of the sheath or has far too much back-corner/front-corner wobble double-check that your printing layer height isn't messing with the tolerances: With STEM_WALL_THICKNESS=1.2 the bottom layer of the sheath where it touches the stem is precisely 1.68mm tall.  Your layer height can impact this value considerably which is why a 0.28mm layer height is recommended (for FDM) as this results in that layer being precisely 1.68mm above the bed.
 // NOTE: Also remember that YOU CAN ALWAYS SAND THE STEM IF IT'S TOO TIGHT.  As long as you get up to like 600 grit (or higher) your switch should still be nice and smooth (eventually--after some normal use).
 // NOTE: You can visualize STEM_TOLERANCE by uncommenting the "visualize" RENDER bits at the top of this file.
