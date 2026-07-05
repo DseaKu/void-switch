@@ -147,17 +147,12 @@ module sheath_cherry_cross(length, stem_diameter, travel, cover_thickness,
           ]) {
             cube([top_magnet_diameter*2,top_magnet_height*4+magnet_tolerance,top_magnet_diameter+magnet_diameter_tolerance], center=true);
         }
-        // Contact wire holes (horizontal cross-bars at the bottom of the sheath)
-        // Top wire (elongated slot so it can be pushed down by the stem)
-        translate([0, sheath_overall_length/2 + lip_height - 2, sheath_height/2]) {
-            hull() {
-                translate([0, -0.5, 0]) rotate([0,90,0]) cylinder(d=1.2, h=sheath_width*3, center=true);
-                translate([0, 0.5, 0]) rotate([0,90,0]) cylinder(d=1.2, h=sheath_width*3, center=true);
-            }
-        }
-        // Bottom wire (stationary)
+        // Contact wire holes (two wires coming from each side, with a 3mm gap in the middle)
         translate([0, sheath_overall_length/2 + lip_height - 0.5, sheath_height/2]) {
-            rotate([0,90,0]) cylinder(d=1.2, h=sheath_width*3, center=true);
+            // Left contact
+            translate([-sheath_width/2 - 0.5, 0, 0]) rotate([0,90,0]) cylinder(d=1.2, h=sheath_width/2 - 1, center=false);
+            // Right contact
+            translate([sheath_width/2 + 0.5, 0, 0]) rotate([0,-90,0]) cylinder(d=1.2, h=sheath_width/2 - 1, center=false);
         }
 
         if (!snug_magnet) {
