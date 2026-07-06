@@ -148,7 +148,7 @@ module sheath_cherry_cross(length, stem_diameter, travel, cover_thickness,
             cube([top_magnet_diameter*2,top_magnet_height*4+magnet_tolerance,top_magnet_diameter+magnet_diameter_tolerance], center=true);
         }
         // Contact wire holes (two wires coming from each side, with a 3mm gap in the middle)
-        translate([0, sheath_overall_length/2 + lip_height - 0.5, sheath_height/2]) {
+        translate([0, sheath_overall_length/2 + lip_height - 1.0, sheath_height/2]) {
             // Left contact
             translate([-sheath_width/2 - 0.5, 0, 0]) rotate([0,90,0]) cylinder(d=1.2, h=sheath_width/2 - 1, center=false);
             // Right contact

@@ -104,7 +104,7 @@ module stem_cherry_cross(travel, diameter, sheath_length, wall_thickness, cover_
                                     center=true);
                             }
                             // Shorting bar hole at the bottom of the stem
-                            translate([0, 0, 0.6])
+                            translate([0, 0, 1.0])
                                 rotate([0,90,0])
                                     cylinder(d=1.2, h=diameter*2, center=true);
             // This hole makes sure we can push the magnet out if we insert it the wrong way:
